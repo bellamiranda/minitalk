@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   minitalk_bonus.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ismirand <ismirand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/17 14:26:06 by ismirand          #+#    #+#             */
-/*   Updated: 2024/06/04 14:58:49 by ismirand         ###   ########.fr       */
+/*   Created: 2024/06/04 14:03:42 by ismirand          #+#    #+#             */
+/*   Updated: 2024/06/04 14:58:12 by ismirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_H
-# define MINITALK_H
+#ifndef MINITALK_BONUS_H
+# define MINITALK_BONUS_H
 
 # include <unistd.h>//write, getpid
 # include <stdlib.h>//malloc, free, exit
 # include <signal.h>//sigaction, siginfo_t
 # include <sys/types.h>
-# include <locale.h>//setlocale   
 # include "ft_printf/ft_printf.h"
 
 //COLORS
@@ -31,11 +30,11 @@
 
 //SERVER
 void	*ft_memset(void *s, int c, size_t n);
-void	handler(int signal, siginfo_t *info, void *context);
+void	handler_bonus(int signal, siginfo_t *info, void *context);
 
 //CLIENT
 int		ft_atoi(const char *str);
-void	c_handler(int signal);
+void	signal_handler(int signal);
 void	char_to_signal(char c, int pid);
 
 #endif

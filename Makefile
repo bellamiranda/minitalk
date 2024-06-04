@@ -57,12 +57,12 @@ $(C_BONUS):$(C_BONUS_OBJS)
 
 clean:
 	@make clean -C ./ft_printf > /dev/null 2>&1
-	@rm -rf $(S_OBJS) $(C_OBJS)
+	@rm -rf $(S_OBJS) $(C_OBJS) $(S_BONUS_OBJS) $(C_BONUS_OBJS)
 	@echo "\033[1;31m[ ✔ ] Objects files removed\033[0m"
 
 fclean: clean
 	@make fclean -C ./ft_printf > /dev/null 2>&1
-	@rm -rf $(S_NAME) $(C_NAME)
+	@rm -rf $(S_NAME) $(C_NAME) $(S_BONUS) $(C_BONUS)
 	@echo "\033[1;31m[ ✔ ] Executables removed\033[0m"
 
 re: fclean all
